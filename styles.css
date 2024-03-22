@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.earth {
+  width: 50vw; /* 50% dari lebar viewport */
+  height: 50vw; /* 50% dari lebar viewport */
+  max-width: 800px; /* Maksimum lebar bumi */
+  max-height: 800px; /* Maksimum tinggi bumi */
+  background-image: url("earth.png");
+  background-size: cover;
+  border-radius: 50%;
+  animation: rotateEarth 10s linear infinite;
+  cursor: pointer;
+  position: relative;
+}
+
+/* Pin untuk Lokasi Negara */
+.pin {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Koordinat dan Warna untuk setiap Negara */
+.netherlands {
+  top: 42%;
+  left: 42%;
+  background-color: #00ff37; /* Warna untuk Belanda */
+}
+
+.belgium {
+  top: 44%;
+  left: 41%;
+  background-color: #5c228b; /* Warna untuk Belgia */
+}
+
+.austria {
+  top: 48%;
+  left: 46%;
+  background-color: #ffc300; /* Warna untuk Austria */
+}
+
+.germany {
+  top: 44%;
+  left: 45%;
+  background-color: #ff5733; /* Warna untuk Germany */
+}
+
+.sweden {
+  top: 33%;
+  left: 49%;
+  background-color: #85e9d8; /* Warna untuk Swedia */
+}
+
+.finland {
+  top: 33%;
+  left: 53%;
+  background-color: #0805a3; /* Warna untuk Finlandia */
+}
+
+.denmark {
+  top: 40%;
+  left: 45%;
+  background-color: #5499c7; /* Warna untuk Denmark */
+}
+
+.norway {
+  top: 35%;
+  left: 45%;
+  background-color: #e748c5; /* Warna untuk Norway */
+}
+
+.uk {
+  top: 40%;
+  left: 38%;
+  background-color: #f4d03f; /* Warna untuk Inggris */
+}
+
+.side-image {
+  width: 500px; /* lebar gambar */
+  height: auto; /* tinggi gambar menyesuaikan proporsi */
+  margin-left: 20px; /* jarak antara gambar dan bumi */
+}
+
+@keyframes rotateEarth {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.side-image {
+  width: 30%; /* lebar gambar sebagai persentase dari lebar viewport */
+  height: auto; /* tinggi gambar menyesuaikan proporsi */
+  margin-left: 20px; /* jarak antara gambar dan bumi */
+}
